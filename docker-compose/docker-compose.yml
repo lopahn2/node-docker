@@ -1,0 +1,15 @@
+# docker-compose의 버전을 명시. 버전별로 명령어등의 약간의 차이가 있다.
+version: "2"
+
+services:
+    app:
+        container_name: app
+        build: ../
+
+        # 환경변수를 지정할 수 있음.
+        environment:
+            NODE_ENV: localhost
+        ports:
+            - 8080:3000
+        
+    
